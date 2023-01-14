@@ -6,7 +6,7 @@ import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
 import com.tenmafrank.projectwife.utils.Constants
 
-class UserPreferences(val context: Context) {
+class UserPreferences(context: Context) {
 
     private val enSharedPreferences: SharedPreferences = EncryptedSharedPreferences.create(
         context,
@@ -16,7 +16,7 @@ class UserPreferences(val context: Context) {
         EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
     )
 
-    fun saveNameUser(name: String){
+    fun setNameUser(name: String){
         enSharedPreferences.edit().putString(Constants.USER_NAME_KEY, name).apply()
     }
 
