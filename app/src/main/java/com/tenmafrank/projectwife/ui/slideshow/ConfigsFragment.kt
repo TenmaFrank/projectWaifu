@@ -23,10 +23,10 @@ class ConfigsFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_configs,container,false)
         viewModel = ViewModelProvider(this)[ConfigsViewModel::class.java]
-        val textView: TextView = binding.textSlideshow
+        /*val textView: TextView = binding.textFieldInput
         viewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
-        }
+        }*/
         return binding.root
     }
 }

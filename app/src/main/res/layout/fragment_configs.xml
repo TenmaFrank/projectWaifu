@@ -7,18 +7,66 @@
         android:layout_height="match_parent"
         tools:context=".ui.slideshow.ConfigsFragment">
 
-        <TextView
-            android:id="@+id/text_slideshow"
+        <com.google.android.material.textfield.TextInputLayout
+            style="?attr/textInputOutlinedStyle"
+            android:id="@+id/userNameTextField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="@string/configs_user_name_label"
+            android:layout_margin="@dimen/fab_margin"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userNameInputTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="?attr/textInputOutlinedStyle"
+            android:id="@+id/userBdayTextField"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:hint="@string/config_user_bday_label"
+            android:layout_margin="@dimen/fab_margin"
+            app:layout_constraintTop_toBottomOf="@id/userNameTextField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/spinner">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userBdayInputTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/oText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/config_your_so_data"
+                android:gravity="center_vertical"
+                android:layout_margin="@dimen/fab_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userBdayTextField"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/match_constraint"
+            android:entries="@array/genders"
+            android:layout_marginEnd="@dimen/fab_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toEndOf="@+id/userBdayTextField"
+            app:layout_constraintTop_toTopOf="@+id/userBdayTextField"
+            app:layout_constraintBottom_toBottomOf="@id/userBdayTextField"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

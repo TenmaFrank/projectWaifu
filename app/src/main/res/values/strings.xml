@@ -10,4 +10,24 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_configs">Configuration</string>
+
+    <string name="configs_user_name_label">Your name or alias:</string>
+    <string name="config_user_bday_label">your birthday:</string>
+    <string name="config_user_gender_label">your gender:</string>
+    <string name="config_your_so_data">Significant Other Data:</string>
+    <string name="configs_so_name_label">Your S/O name:</string>
+    <string name="config_so_weight_label">S/O Weight:</string>
+    <string name="configs_so_height_label">S/O height:</string>
+    <string name="config_so_gender_label">S/O gender:</string>
+    <string name="config_so_age_label">S/O age:</string>
+    <string name="config_so_bday_label">S/O Birthday:</string>
+    <string name="config_so_3_sizes_label">S/O Three sizes</string>
+    <string name="config_so_bust_size_label">S/O bust size:</string>
+    <string name="config_so_waist_size_label">S/O waist size:</string>
+    <string name="config_so_hip_size_label">S/O hip size:</string>
+    <string name="config_so_personality_label">Select S/O type:</string>
+    <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 </resources>
