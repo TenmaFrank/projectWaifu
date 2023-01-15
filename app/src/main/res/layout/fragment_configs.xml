@@ -33,6 +33,8 @@
             android:layout_height="wrap_content"
             android:hint="@string/config_user_bday_label"
             android:layout_margin="@dimen/fab_margin"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_action_calendar"
             app:layout_constraintTop_toBottomOf="@id/userNameTextField"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/userGenderTextField">
@@ -41,6 +43,7 @@
                 android:id="@+id/userBdayInputTextField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="date"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>

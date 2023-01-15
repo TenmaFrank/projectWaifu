@@ -13,6 +13,7 @@
 
     <string name="configs_user_name_label">Your name or alias:</string>
     <string name="config_user_bday_label">your birthday:</string>
+    <string name="config_bday_datepicker_label">Select a date for birthday:</string>
     <string name="config_user_gender_label">your gender:</string>
     <string name="config_your_so_data">Significant Other Data:</string>
     <string name="configs_so_name_label">Your S/O name:</string>
