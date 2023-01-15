@@ -27,8 +27,29 @@
     <string name="config_so_waist_size_label">S/O waist size:</string>
     <string name="config_so_hip_size_label">S/O hip size:</string>
     <string name="config_so_personality_label">Select S/O type:</string>
+    <string name="config_so_sanguine_type_label">S/O Sanguine type:</string>
+    <string name="config_so_alias_label">Give a Nickname to your So:</string>
+    <string name="config_so_user_alias_label">How would you like to call you:</string>
+    <string name="upload_data">Sign your Marriage</string>
     <string-array name="genders">
         <item>Male</item>
         <item>Female</item>
+    </string-array>
+    <string-array name="personalities">
+        <item>Tsundere</item>
+        <item>Yandere</item>
+        <item>Deredere</item>
+        <item>Himeder</item>
+        <item>Dandere</item>
+    </string-array>
+    <string-array name="sanguine_type">
+        <item>A+</item>
+        <item>O+</item>
+        <item>B+</item>
+        <item>AB+</item>
+        <item>A-</item>
+        <item>O-</item>
+        <item>B-</item>
+        <item>AB-</item>
     </string-array>
 </resources>
