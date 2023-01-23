@@ -62,6 +62,7 @@
                 app:layout_constraintEnd_toEndOf="parent">
 
                 <AutoCompleteTextView
+                    android:id="@+id/userGenderInput"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="none"
@@ -135,6 +136,7 @@
                 app:layout_constraintEnd_toEndOf="parent">
 
                 <AutoCompleteTextView
+                    android:id="@+id/soGenderInputTextField"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="none"
@@ -267,6 +269,7 @@
                 app:layout_constraintEnd_toStartOf="@id/soSanguineTextField">
 
                 <AutoCompleteTextView
+                    android:id="@+id/soPersonalityInputTextField"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="none"
@@ -287,6 +290,7 @@
                 app:layout_constraintStart_toEndOf="@id/soPersonalityTextField">
 
                 <AutoCompleteTextView
+                    android:id="@+id/soSanguineInputTextField"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="none"

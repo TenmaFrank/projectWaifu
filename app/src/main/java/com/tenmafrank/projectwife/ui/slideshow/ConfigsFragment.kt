@@ -5,9 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -62,10 +59,26 @@ class ConfigsFragment : Fragment() {
             dpp.datePicker.maxDate = c.timeInMillis
             dpp.show()
         }
-        /*val textView: TextView = binding.textFieldInput
-        viewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }*/
+
+        binding.confirmButton.setOnClickListener {
+            val userName = binding.userNameInputTextField.text.toString()
+            val userBday = binding.userBdayInputTextField.text.toString()
+            val userGender = binding.userGenderInput.text.toString()
+            val soName = binding.soNameInputTextField.text.toString()
+            val soBday = binding.soBdayInputTextField.text.toString()
+            val soGender = binding.soGenderInputTextField.text.toString()
+            val soWeight = binding.soWeightInputTextField.text.toString()
+            val soHeight = binding.soHeightInputTextField.text.toString()
+            val soBust = binding.soBustSizeInputTextField.text.toString()
+            val soWaist = binding.soWaistSizeInputTextField.text.toString()
+            val soHip = binding.soHipSizeInputTextField.text.toString()
+            val soPersonality = binding.soPersonalityInputTextField.text.toString()
+            val soBloodType = binding.soSanguineInputTextField.text.toString()
+            val soNickname = binding.lovelyNameInputTextField.text.toString()
+            val userNickname = binding.userLovelyNameInputTextField.text.toString()
+            val registerd = viewModel.setRegister(userName,userBday, userGender, soName, soBday, soGender, soWeight,
+            soHeight, soBust, soWaist, soHip, soPersonality, soBloodType, soNickname, userNickname)
+        }
         return binding.root
     }
 }

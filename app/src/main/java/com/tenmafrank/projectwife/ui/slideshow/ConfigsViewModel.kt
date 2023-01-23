@@ -1,13 +1,17 @@
 package com.tenmafrank.projectwife.ui.slideshow
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import android.util.Log
 import androidx.lifecycle.ViewModel
 
 class ConfigsViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+    private val TAG = "Configs"
+
+    fun setRegister(userName: String, userBday: String, userGender: String, soName: String,
+                    soBday: String, soGender: String, soWeight: String, soHeight: String,
+                    soBust: String, soWaist: String, soHip: String, soPersonality: String,
+                    soBloodType: String, soNickname: String, userNickname: String) : Boolean{
+        Log.d(TAG,userName + userBday + userGender)
+        return true
     }
-    val text: LiveData<String> = _text
 }

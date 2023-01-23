@@ -7,7 +7,7 @@ import com.tenmafrank.projectwife.userpreferences.UserAplication.Companion.userD
 
 class HomeViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
-        value = userData.getNameUser()
+        value = userData.getUserName()
     }
     val text: LiveData<String> = _text
 }

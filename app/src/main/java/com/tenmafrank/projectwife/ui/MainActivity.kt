@@ -1,6 +1,7 @@
 package com.tenmafrank.projectwife.ui
 
 import android.os.Bundle
+import android.widget.TextView
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -13,6 +14,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.tenmafrank.projectwife.R
 import com.tenmafrank.projectwife.databinding.ActivityMainBinding
+import com.tenmafrank.projectwife.userpreferences.UserAplication.Companion.userData
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,6 +40,9 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        val header = navView.getHeaderView(0)
+        val headerTitle = header.findViewById<TextView>(R.id.headTitle)
+        headerTitle.text = userData.getSoName()
     }
 
     override fun onSupportNavigateUp(): Boolean {
