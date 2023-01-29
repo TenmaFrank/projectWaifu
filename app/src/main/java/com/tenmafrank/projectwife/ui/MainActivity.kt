@@ -1,6 +1,7 @@
 package com.tenmafrank.projectwife.ui
 
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -42,11 +43,21 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
         val header = navView.getHeaderView(0)
         val headerTitle = header.findViewById<TextView>(R.id.headTitle)
+        val headerImage = header.findViewById<ImageView>(R.id.imageView)
         headerTitle.text = userData.getSoName()
+        if (userData.getSpecialRegister()) {
+            headerImage.setImageResource(R.drawable.gabu_def_photo)
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        finish();
+        startActivity(intent);
     }
 }
