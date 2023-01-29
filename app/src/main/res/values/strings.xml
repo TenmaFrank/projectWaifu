@@ -31,6 +31,7 @@
     <string name="config_so_alias_label">Give a Nickname to your S/O:</string>
     <string name="config_so_user_alias_label">How would your S/O like to call you:</string>
     <string name="upload_data">Sign your Marriage</string>
+    <string name="data_uploaded">HAPPILY MARRIED</string>
     <string-array name="genders">
         <item>Male</item>
         <item>Female</item>

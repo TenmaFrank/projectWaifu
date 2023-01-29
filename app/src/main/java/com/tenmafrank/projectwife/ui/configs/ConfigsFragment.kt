@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.tenmafrank.projectwife.R
 import com.tenmafrank.projectwife.databinding.FragmentConfigsBinding
+import com.tenmafrank.projectwife.userpreferences.UserAplication.Companion.userData
 import com.tenmafrank.projectwife.utils.Constants
 import com.tenmafrank.projectwife.utils.Toaster
 import java.util.*
@@ -42,6 +43,60 @@ class ConfigsFragment : Fragment() {
                 .build()
         var registerLabel = "incomplete"
         var toastMessage = "nothign to do"
+
+        if (userData.getRegister()){
+            with(binding){
+                userNameTextField.isEnabled = false
+                userNameInputTextField.setText(userData.getUserName())
+
+                userBdayTextField.isEnabled = false
+                userBdayInputTextField.setText(userData.getUserBday())
+
+                userGenderTextField.isEnabled = false
+                userGenderInput.setText(userData.getUserGender())
+
+                soNameTextField.isEnabled = false
+                soNameInputTextField.setText(userData.getSoName())
+
+                soBdayTextField.isEnabled = false
+                soBdayInputTextField.setText(userData.getSoBday())
+
+                soGenderTextField.isEnabled = false
+                soGenderInputTextField.setText(userData.getSoGender())
+
+                soHeightTextField.isEnabled = false
+                soHeightInputTextField.setText(userData.getSoHeight())
+
+                soWeightTextField.isEnabled = false
+                soWeightInputTextField.setText(userData.getSoWeightSize())
+
+                soBustSizeTextField.isEnabled = false
+                soBustSizeInputTextField.setText(userData.getSoBustSizet())
+
+                soWaistSizeTextField.isEnabled = false
+                soWaistSizeInputTextField.setText(userData.getSoWaistSize())
+
+                soHipSizeTextField.isEnabled = false
+                soHipSizeInputTextField.setText(userData.getSoHipSize())
+
+                soPersonalityTextField.isEnabled = false
+                soPersonalityInputTextField.setText(userData.getSoPersonalitySize())
+
+                soSanguineTextField.isEnabled = false
+                soSanguineInputTextField.setText(userData.getSoBloodType())
+
+                lovelyNameTextField.isEnabled = false
+                lovelyNameInputTextField.setText(userData.getSoNickname())
+
+                userLovelyNameTextField.isEnabled = false
+                userLovelyNameInputTextField.setText(userData.getUserNickname())
+
+                lockConfirmButton()
+            }
+        }
+        else{
+            unlockConfirmButton()
+        }
 
         binding.userBdayTextField.setEndIconOnClickListener{
             val dpp = DatePickerDialog(
@@ -122,15 +177,25 @@ class ConfigsFragment : Fragment() {
                     toastMessage = resources.getString(R.string.forbidden_name_label)
                 Constants.SPECIAL_USER -> {
                     toastMessage = resources.getString(R.string.special_user_welcome)
-                    binding.confirmButton.isEnabled = false
+                    lockConfirmButton()
                 }
                 Constants.COMPLETE -> {
                     toastMessage = resources.getString(R.string.incomplete_form_label)
-                    binding.confirmButton.isEnabled = false
+                    lockConfirmButton()
                 }
             }
             toaster.makeAToast(requireContext(),toastMessage)
         }
         return binding.root
+    }
+
+    private fun lockConfirmButton(){
+        binding.confirmButton .text = resources.getText(R.string.data_uploaded)
+        binding.confirmButton.isEnabled = false
+    }
+
+    private fun unlockConfirmButton(){
+        binding.confirmButton .text = resources.getText(R.string.upload_data)
+        binding.confirmButton.isEnabled = true
     }
 }
