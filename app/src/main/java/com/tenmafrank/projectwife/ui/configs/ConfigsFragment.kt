@@ -42,7 +42,7 @@ class ConfigsFragment : Fragment() {
                 .setTitleText(resources.getText(R.string.config_bday_datepicker_label))
                 .build()
         var registerLabel = "incomplete"
-        var toastMessage = "nothign to do"
+        var toastMessage = "nothing to do"
 
         if (userData.getRegister()){
             with(binding){

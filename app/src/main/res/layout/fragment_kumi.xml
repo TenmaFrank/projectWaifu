@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.about.KumiFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/kumiFullImageView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="350dp"
+                android:padding="@dimen/fab_margin"
+                app:srcCompat="@drawable/kuni"
+                tools:srcCompat="@drawable/kuni"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/kumiHistoryTextView"/>
+            <TextView
+                android:id="@+id/kumiHistoryTextView"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="@dimen/fab_margin"
+                android:text="@string/kumi_history"
+                app:layout_constraintStart_toEndOf="@id/kumiFullImageView"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

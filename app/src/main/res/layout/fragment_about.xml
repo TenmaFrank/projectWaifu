@@ -12,7 +12,22 @@
             tools:context=".ui.about.AboutFragment">
 
             <TextView
-                android:id="@+id/text_gallery"
+                android:id="@+id/aboutTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:text="@string/about_tile"
+                android:padding="@dimen/fab_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/aboutAbstract"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -20,10 +35,72 @@
                 android:layout_marginEnd="8dp"
                 android:textAlignment="center"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/about_abstract"
+                android:padding="@dimen/fab_margin"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/aboutTitle" />
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button"
+                android:id="@+id/aboutRulesButton"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:text="@string/about_rules_button_label"
+                android:layout_margin="@dimen/fab_margin"
+                app:layout_constraintTop_toBottomOf="@id/aboutAbstract"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/aboutHowUseButton"
+                />
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button"
+                android:id="@+id/aboutHowUseButton"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:text="@string/abouy_how_to_use_button_label"
+                android:layout_margin="@dimen/fab_margin"
+                app:layout_constraintTop_toBottomOf="@id/aboutAbstract"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/aboutRulesButton"
+                />
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button"
+                android:id="@+id/aboutFaqButton"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:text="@string/about_rules_button_label"
+                android:layout_margin="@dimen/fab_margin"
+                app:layout_constraintTop_toBottomOf="@id/aboutRulesButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/aboutChangeLogButton"
+                />
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button"
+                android:id="@+id/aboutChangeLogButton"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:text="@string/about_change_log_button_label"
+                android:layout_margin="@dimen/fab_margin"
+                app:layout_constraintTop_toBottomOf="@id/aboutHowUseButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/aboutFaqButton"
+                />
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button"
+                android:id="@+id/aboutKumiButton"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:text="@string/about_who_is_default_wiaifu_button_label"
+                android:layout_margin="@dimen/fab_margin"
+                app:layout_constraintTop_toBottomOf="@id/aboutChangeLogButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>
