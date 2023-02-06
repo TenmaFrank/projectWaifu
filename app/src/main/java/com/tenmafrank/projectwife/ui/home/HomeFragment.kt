@@ -24,9 +24,6 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
 
 
-        viewModel.text.observe(viewLifecycleOwner) {
-            binding.textHome.text = it
-        }
         return binding.root
     }
 }

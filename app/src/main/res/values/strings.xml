@@ -75,4 +75,8 @@
     <!-- kumi fragment -->
     <string name="kumi_history">She is Kumiko Akira\, a young witch who is training to be one of the most powerful witches.
     \nShe is optimist and happy\, talented but lazy and carefree\, </string>
+
+    <!-- home fragment -->
+    <string name="send_message_button_label">Send…</string>
+    <string name="message_text_input_hint">Write a message…</string>
 </resources>
