@@ -2,6 +2,8 @@ package com.tenmafrank.projectwife.utils
 
 object Constants {
     //prefrences keys
+    const val SEND_ID = "SEND_ID"
+    const val RECEIVE_ID = "RECEIVE_ID"
     const val PREFERENCES_KEY = "uPref"
     const val USER_NAME_KEY = "userName"
     const val USER_BDAY_KEY = "userBday"

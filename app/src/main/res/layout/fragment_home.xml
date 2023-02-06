@@ -16,7 +16,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/msBar"
-            tools:itemCount="20"/>
+            tools:itemCount="20"
+            tools:listitem="@layout/message_item"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/msBar"
@@ -38,7 +39,7 @@
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/userBdayTextField"
+                    android:id="@+id/userMessageTextField"
                     android:layout_width="@dimen/match_constraint"
                     android:layout_height="wrap_content"
                     android:hint="@string/message_text_input_hint"
@@ -46,17 +47,17 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/btn_send">
+                    app:layout_constraintEnd_toStartOf="@id/btnSend">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/userBdayInputTextField"
+                        android:id="@+id/userMessageInputTextField"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
-                    android:id="@+id/btn_send"
+                    android:id="@+id/btnSend"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
