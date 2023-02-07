@@ -6,6 +6,12 @@ import java.text.SimpleDateFormat
 
 object Time {
 
+    /**
+     * timeStamp
+     * Description: gets a time stamp for current time
+     * 06/02/2023
+     * TenmaFran
+     **/
     fun timeStamp(): String {
 
         val timeStamp = Timestamp(System.currentTimeMillis())

@@ -1,5 +1,10 @@
 package com.tenmafrank.projectwife.utils
-
+/**
+ * Constants
+ * Description: Constant values needed in the app
+ * 06/02/2023
+ * TenmaFran
+ **/
 object Constants {
     //prefrences keys
     const val SEND_ID = "SEND_ID"

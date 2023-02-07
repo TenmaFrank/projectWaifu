@@ -61,6 +61,12 @@ class HomeFragment : Fragment() {
         }
     }
 
+    /**
+     * recyclerView
+     * Description: initalize the main recycler view
+     * 06/02/2023
+     * TenmaFran
+     **/
     private fun recyclerView() {
         adapter = ChatAdapter()
         binding.rvMessages.adapter = adapter
@@ -68,8 +74,13 @@ class HomeFragment : Fragment() {
 
     }
 
+    /**
+     * clickEvents
+     * Description: handle the events triggered trough click
+     * 06/02/2023
+     * TenmaFran
+     **/
     private fun clickEvents() {
-
         //Send a message
         binding.btnSend.setOnClickListener {
             sendMessage()
@@ -88,6 +99,12 @@ class HomeFragment : Fragment() {
         }
     }
 
+    /**
+     * sendMessage
+     * Description: read the messasge and add to the recycler view
+     * 06/02/2023
+     * TenmaFran
+     **/
     private fun sendMessage() {
         val message = binding.userMessageInputTextField.text.toString()
         val timeStamp = Time.timeStamp()
@@ -104,6 +121,12 @@ class HomeFragment : Fragment() {
         }
     }
 
+    /**
+     * customBotMessage
+     * Description: send a message as bot
+     * 06/02/2023
+     * TenmaFran
+     **/
     private fun customBotMessage(message: String) {
         GlobalScope.launch {
             delay(1000)

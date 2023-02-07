@@ -4,9 +4,13 @@ import android.content.Context
 import android.widget.Toast
 
 class Toaster {
-    //requires context and message, cant use to show massages trough toast
+    /**
+     * makeAToast
+     * Description: requires context and message, can use to show massages trough toast
+     * 07:17 p. m.
+     * TenmaFran
+     **/
     fun makeAToast(context: Context, message: String){
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
-    //---
 }
