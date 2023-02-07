@@ -79,4 +79,14 @@
     <!-- home fragment -->
     <string name="send_message_button_label">Send…</string>
     <string name="message_text_input_hint">Write a message…</string>
+    <string-array name="default_greatings">
+        <item>Hello!</item>
+        <item>HI</item>
+        <item>Hey There</item>
+        <item>Hi, Master</item>
+        <item>Great to see you</item>
+        <item>I miss you</item>
+        <item>Welcome Back</item>
+        <item>Hooray you came back</item>
+    </string-array>
 </resources>

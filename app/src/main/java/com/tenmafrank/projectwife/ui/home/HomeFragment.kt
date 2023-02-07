@@ -41,12 +41,14 @@ class HomeFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home,container,false)
         viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
 
+        val hiList = resources.getStringArray(R.array.default_greatings)
+
         recyclerView()
 
         clickEvents()
 
-        val random = (0..6).random()
-        customBotMessage(welcomemsg[random])
+        val random = (hiList.indices).random()
+        customBotMessage(hiList[random])
         return binding.root
     }
 
