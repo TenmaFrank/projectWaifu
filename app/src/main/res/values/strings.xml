@@ -7,6 +7,16 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <string name="login_main_text_label">wAIfuChat</string>
+    <string name="username_login_text_label">UserName or Mail: </string>
+    <string name="pword_text_label">Password: </string>
+    <string name="login_button_label">Log In</string>
+    <string name="sign_up_button_label">Sign Up</string>
+    <string name="about_button_label">About</string>
+    <string name="username_sign_text_label">UserName: </string>
+    <string name="mail_sign_text_label">Mail: </string>
+    <string name="pword_repeat_sign_text_label">Confirm Password: </string>
+
     <string name="coming_soon">Coming Soon…</string>
 
     <string name="menu_home">Home</string>
@@ -90,4 +100,6 @@
         <item>Welcome Back</item>
         <item>Hooray you came back</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
