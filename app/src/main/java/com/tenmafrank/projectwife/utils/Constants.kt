@@ -27,7 +27,10 @@ object Constants {
     const val USER_NICKNAME_KEY = "userNick"
     const val SCORE_KEY = "score"
     const val REGISTER_KEY = "registed"
+    const val PIC_URI_KEY = "picureWaifuKey"
     //----
+
+    const val IMAGE_REQUEST_CODE = 100
 
     //default data
     const val DEFAULT_USER_NAME = "Master"

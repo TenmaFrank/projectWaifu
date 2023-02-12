@@ -34,6 +34,7 @@
     <string name="config_so_user_alias_label">How would your S/O like to call you:</string>
     <string name="upload_data">Sign your Marriage</string>
     <string name="data_uploaded">HAPPILY MARRIED</string>
+    <string name="upload_image_label">Pic of Your Waifu</string>
     <string-array name="genders">
         <item>Male</item>
         <item>Female</item>

@@ -350,6 +350,26 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 />
 
+            <ImageView
+                android:id="@+id/soImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="@dimen/fab_margin"
+                app:layout_constraintTop_toBottomOf="@id/confirmButton"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button"
+                android:id="@+id/setSoImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_data"
+                android:layout_margin="@dimen/fab_margin"
+                app:layout_constraintTop_toBottomOf="@id/confirmButton"
+                app:layout_constraintStart_toEndOf="@id/soImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>

@@ -1,23 +1,27 @@
 package com.tenmafrank.projectwife.ui.configs
 
+import android.Manifest
 import android.app.DatePickerDialog
-import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
-import androidx.core.content.ContextCompat.getSystemService
+import androidx.core.app.ActivityCompat
+import androidx.core.net.toUri
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.google.android.material.datepicker.MaterialDatePicker
 import com.tenmafrank.projectwife.R
 import com.tenmafrank.projectwife.databinding.FragmentConfigsBinding
 import com.tenmafrank.projectwife.userpreferences.UserAplication.Companion.userData
 import com.tenmafrank.projectwife.utils.Constants
 import com.tenmafrank.projectwife.utils.Toaster
 import java.util.*
+
 
 class ConfigsFragment : Fragment() {
 
@@ -37,12 +41,17 @@ class ConfigsFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_configs,container,false)
         viewModel = ViewModelProvider(this)[ConfigsViewModel::class.java]
-        val datePicker =
-            MaterialDatePicker.Builder.datePicker()
-                .setTitleText(resources.getText(R.string.config_bday_datepicker_label))
-                .build()
+
         var registerLabel = "incomplete"
         var toastMessage = "nothing to do"
+        var uriPic = userData.getPicWaifu().toUri()
+
+        if (uriPic.toString().isEmpty()){
+            binding.soImage.setImageResource(R.drawable.kuni)
+        }
+        else{
+            binding.soImage.setImageURI(uriPic)
+        }
 
         if (userData.getRegister()){
             with(binding){
@@ -186,6 +195,11 @@ class ConfigsFragment : Fragment() {
             }
             toaster.makeAToast(requireContext(),toastMessage)
         }
+        binding.setSoImage.setOnClickListener{
+            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+            intent.type = "image/*"
+            startActivityForResult(intent, Constants.IMAGE_REQUEST_CODE)
+        }
         return binding.root
     }
 
@@ -197,5 +211,20 @@ class ConfigsFragment : Fragment() {
     private fun unlockConfirmButton(){
         binding.confirmButton .text = resources.getText(R.string.upload_data)
         binding.confirmButton.isEnabled = true
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        val uri = data?.data
+        userData.setPicWaifu(uri.toString())
+        if (uri != null) {
+            binding.soImage.setImageURI(userData.getPicWaifu().toUri())
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                requireContext().contentResolver.takePersistableUriPermission(
+                    uri,
+                    Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+                )
+            }
+        }
     }
 }

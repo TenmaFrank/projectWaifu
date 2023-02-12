@@ -155,4 +155,11 @@ class UserPreferences(context: Context) {
     fun getRegister(): Boolean{
         return enSharedPreferences.getBoolean(Constants.REGISTER_KEY, false)
     }
+    //pic of your waifu
+    fun setPicWaifu(uri: String){
+        enSharedPreferences.edit().putString(Constants.PIC_URI_KEY, uri).apply()
+    }
+    fun getPicWaifu():String{
+        return enSharedPreferences.getString(Constants.PIC_URI_KEY,"")!!
+    }
 }
